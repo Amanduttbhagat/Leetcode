@@ -9,6 +9,9 @@ public:
             while(strs[i].find(prefix) != 0){
                 prefix = prefix.substr(0,prefix.length()-1);
             }
+            if(prefix == ""){
+                return prefix;
+            }
         }
         return prefix;
     }
