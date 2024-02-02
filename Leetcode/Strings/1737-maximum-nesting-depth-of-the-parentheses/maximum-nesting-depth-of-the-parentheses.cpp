@@ -6,8 +6,8 @@ public:
         for(int i=0;i<s.length();i++){
             if(s.substr(i,1) == "("){
                 res++;
-                ans = max(res,ans);
             }else if(s.substr(i,1) == ")"){
+                ans = max(res,ans);
                 res--;
             }
         }
