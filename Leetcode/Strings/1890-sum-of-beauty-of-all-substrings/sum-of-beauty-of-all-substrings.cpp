@@ -5,14 +5,13 @@ public:
         int n =s.size();
         for(int i=0;i<n;i++){
             map<char,int> m;
+            multiset<int> st;
             for(int j=i;j<n;j++){
+                if(m.find(s[j]) != m.end())
+                st.erase(st.find(m[s[j]]));
                 m[s[j]]++;
-                int m_f = 0; int l_f = INT_MAX;
-                for(auto a:m){
-                    m_f = max(m_f, a.second);
-                    l_f = min(l_f, a.second);
-                }
-                ans+=m_f-l_f;
+                st.insert(m[s[j]]);
+                ans+=(*st.rbegin()-*st.begin());
             }
         }   
         return ans;
