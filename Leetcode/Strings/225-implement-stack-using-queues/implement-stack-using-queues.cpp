@@ -8,9 +8,9 @@ public:
         if(q.empty()){
             q.push(x);
         }else{
-            int sizes = q.size();
+            int sizes = q.size()-1;
             q.push(x);
-            while(sizes-->0){
+            while(sizes-- >= 0){
                 q.push(q.front());
                 q.pop();
             }
