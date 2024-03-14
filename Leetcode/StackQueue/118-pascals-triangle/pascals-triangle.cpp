@@ -11,7 +11,7 @@ public:
             for(int i=0;i<numRows-1;i++){
                 vector<int> inner;
                 inner.push_back(1);
-                for(int j=0;j<l-1;j++){
+                for(int j=0;j<i;j++){
                     inner.push_back(dir[j]+dir[j+1]);
                 }
                 inner.push_back(1);
